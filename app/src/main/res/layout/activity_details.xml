@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".view.DetailsActivity">
+    <ImageView
+        android:id="@+id/imageCharacter"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:contentDescription="image"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="haary"
+        android:id="@+id/fullName"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Nickname: Ron"
+        android:layout_height="wrap_content"
+        android:id="@+id/nickname"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="House: Gryffindor"
+        android:id="@+id/hogwartsHouse"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interpreted By: Rupert Grint"
+        android:id="@+id/interpretedBy"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Birthdate: Mar 1, 1980"
+        android:id="@+id/birthdate"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Children: Rose Granger-Weasley, Hugo Granger-Weasley"
+        android:id="@+id/children"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center" />
+
+</LinearLayout>

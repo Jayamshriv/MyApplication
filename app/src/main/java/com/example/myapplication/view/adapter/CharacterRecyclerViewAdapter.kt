@@ -1,16 +1,20 @@
 package com.example.myapplication.view.adapter
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.myapplication.data.CharacterModel
 import com.example.myapplication.databinding.CharacterItemBinding
+import com.example.myapplication.view.DetailsActivity
 import javax.inject.Inject
 
-class CharacterRecyclerViewAdapter : RecyclerView.Adapter<CharacterRecyclerViewAdapter.CharacterViewHolder>() {
-
-
+class CharacterRecyclerViewAdapter(
+    private val context : Context
+) : RecyclerView.Adapter<CharacterRecyclerViewAdapter.CharacterViewHolder>() {
     var characterList = CharacterModel()
     fun fetchCharacter(
         characterList : CharacterModel
@@ -29,10 +33,18 @@ class CharacterRecyclerViewAdapter : RecyclerView.Adapter<CharacterRecyclerViewA
         val items = characterList[position]
         holder.binding.apply {
             Glide
-                .with(imageCharacter)
+                .with(imageCharacter.context)
                 .load(items.image)
+                .into(imageCharacter)
 
             nameCharacter.text = items.fullName
+            cv.setOnClickListener {
+                val intent = Intent(context, DetailsActivity::class.java).apply {
+                    putExtra("characterIndex", items.index)
+                }
+                context.startActivity(intent)
+            }
+
         }
     }
 
